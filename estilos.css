@@ -1,0 +1,154 @@
+body{
+    background: #E5E5E5;
+    margin-left: 0;
+}
+
+#textarea{
+    position: absolute;
+    left: 75%;
+    top: 30px;
+}
+
+textArea{
+    resize: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+textarea::placeholder{
+    color: #2c3e50;
+}
+
+.contenedor-input{
+    position: relative;
+    width: 20%;
+    left: 30%;
+}
+
+#input{
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background: #E5E5E5;
+    border-style: none;
+}
+
+#input::placeholder{
+    color: #2c3e50;
+}
+
+.contenedor-botones{
+    position: relative;
+    width: 30%;
+    left: 23%;
+    top: 250px;
+    text-align: center;
+}
+
+.contenedor-botones p{
+    font-size: 13px;
+}
+
+.boton-encriptar, .boton-desencriptar, .boton-copiar{
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #2c3e50;
+    background: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.boton-encriptar{
+    margin-right: 20px;
+}
+
+.boton-encriptar:hover{
+    background: #95a5a6;
+    
+}
+
+.boton-desencriptar:hover{
+    background: #95a5a6;
+}
+
+.detective{
+    position: relative;
+    width: 15%;
+    height: 15%;
+    left: 79%;
+}
+
+.boton-copiar{
+    position: absolute;
+    left: 81%;
+    top: 75%;
+}
+
+.boton-copiar:hover{
+    background: #95a5a6;
+}
+
+.contenedor-footer{
+    position: absolute;
+    width: 98%;
+    top: 90%;
+    text-align: center;
+    background: #2c3e50;
+    padding: 10px;
+}
+
+.parrafo-footer{
+    color: white;
+}
+
+@media screen and (max-width:480px){
+    #textarea {
+        position: absolute;
+        top: 155px;
+        margin: auto;
+        left: 43px;
+        font-size: 21px;
+    }
+
+    .contenedor-input {
+        position: absolute;
+        left: 135px;
+    }
+
+    .contenedor-botones p {
+        font-size: 18px;
+    }
+
+    .contenedor-botones {
+        position: absolute;
+        width: 80%;
+        left: 20%;
+        top: 87%;
+        text-align: center;
+    }
+
+    .detective {
+        position: absolute;
+        width: 54%;
+        height: 29%;
+        left: 30%;
+        top: 38%;
+    }
+
+    .boton-copiar {
+        position: absolute;
+        left: 42%;
+        top: 75%;
+    }
+
+    .contenedor-footer {
+        position: absolute;
+        width: 112%;
+        top: 105%;
+        text-align: center;
+        background: #2c3e50;
+        padding: 10px;
+    }
+}

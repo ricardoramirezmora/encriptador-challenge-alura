@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Encriptador de mensajes</title>
+</head>
+
+<body>
+    <header>
+        <section class="titulo">
+            <h1><img src="Logo.png" alt="logo-alura"></h1>
+        </section>
+    </header>
+
+    <main>
+        <section class="contenedor-textarea">
+            <textarea id="textarea" cols="30" rows="25" placeholder="Ingrese su texto aqui"></textarea>
+        </section>
+
+        <section class="contenedor-input">
+            <input type="text" id="input" placeholder="Ingrese el texto aquí">
+        </section>
+
+        <section class="contenedor-botones">
+            <p>❗︎Sólo letras minusculas y sin acentos</p>
+            <input type="button" value="Encriptar" class="boton-encriptar" onclick="comprobar()">
+            <input type="button" value="Desencriptar" class="boton-desencriptar" onclick="comprobar2()">
+        </section>
+
+        <img src="image.png" alt="detective" class="detective" id="detective">
+        <input type="button" value="Copiar" class="boton-copiar" onclick="copy()">
+    </main>
+
+    <footer>
+        <section class="contenedor-footer">
+            <p class="parrafo-footer">Ricardo Ramírez Mora - 2023</p>
+            <a href="https://github.com/ricardoramirezmora" target="_blank"><img src="github.png" alt="logo-github"></a>
+            <a href="https://www.linkedin.com/in/ricardo-ramírez-mora-a14088261" target="_blank"><img src="linkedin.png" alt="logo-linkedin"></a>
+        </section>
+    </footer>
+
+    <script>
+
+    function comprobar(){
+        let entrada = document.getElementById("input").value;
+
+        if(entrada.match(/[^a-z" "]/g)){
+            alert("¡Sólo letras minusculas y sin acentos!");
+            document.getElementById("input").value = "";
+        }else if(entrada.match(/[a-z]/,"")){      
+                    let mapObj = {
+                        a:"ai",
+                        e:"enter",
+                        i:"imes",
+                        o:"ober",
+                        u:"ufat"
+                    };
+                    entrada = entrada.replace(/a|e|i|o|u/g, function(matched){
+                        return mapObj[matched];
+                    });
+                    document.getElementById("textarea").value = entrada;
+                    document.getElementById("detective").style.visibility = "hidden";
+                    document.getElementById("input").value = "";
+                }
+    }
+
+    function comprobar2(){
+        let entrada = document.getElementById("input").value;
+
+        if(entrada.match(/[^a-z" "]/g)){
+            alert("¡Sólo letras minusculas y sin acentos!");
+            document.getElementById("input").value = "";
+        }else if(entrada.match(/[a-z]/g)){    
+                    let mapObj = {
+                        ai:"a",
+                        enter:"e",
+                        imes:"i",
+                        ober:"o",
+                        ufat:"u"
+                    };
+                    entrada = entrada.replace(/ai|enter|imes|ober|ufat/g, function(matched){
+                        return mapObj[matched];
+                    });
+                    document.getElementById("textarea").value = entrada;
+                    document.getElementById("detective").style.visibility = "hidden";
+                    document.getElementById("input").value = "";
+                    
+                }
+    }
+
+    function copy(){
+        let textoCopiado = document.getElementById("textarea");
+        textoCopiado.select();
+        document.execCommand("copy");
+        document.getElementById("textarea").value = "";
+    }
+
+    </script>
+</body>
+</html>
