@@ -50,20 +50,20 @@
             alert("¡Sólo letras minusculas y sin acentos!");
             document.getElementById("input").value = "";
         }else if(entrada.match(/[a-z]/,"")){      
-                    let mapObj = {
-                        a:"ai",
-                        e:"enter",
-                        i:"imes",
-                        o:"ober",
-                        u:"ufat"
-                    };
-                    entrada = entrada.replace(/a|e|i|o|u/g, function(matched){
-                        return mapObj[matched];
-                    });
-                    document.getElementById("textarea").value = entrada;
-                    document.getElementById("detective").style.visibility = "hidden";
-                    document.getElementById("input").value = "";
-                }
+                let mapObj = {
+                    a:"ai",
+                    e:"enter",
+                    i:"imes",
+                    o:"ober",
+                    u:"ufat"
+                };
+                entrada = entrada.replace(/a|e|i|o|u/g, function(matched){
+                    return mapObj[matched];
+                });
+                document.getElementById("textarea").value = entrada;
+                document.getElementById("detective").style.visibility = "hidden";
+                document.getElementById("input").value = "";
+            }
     }
 
     function comprobar2(){
@@ -73,21 +73,21 @@
             alert("¡Sólo letras minusculas y sin acentos!");
             document.getElementById("input").value = "";
         }else if(entrada.match(/[a-z]/g)){    
-                    let mapObj = {
-                        ai:"a",
-                        enter:"e",
-                        imes:"i",
-                        ober:"o",
-                        ufat:"u"
-                    };
-                    entrada = entrada.replace(/ai|enter|imes|ober|ufat/g, function(matched){
-                        return mapObj[matched];
-                    });
-                    document.getElementById("textarea").value = entrada;
-                    document.getElementById("detective").style.visibility = "hidden";
-                    document.getElementById("input").value = "";
+                let mapObj = {
+                    ai:"a",
+                    enter:"e",
+                    imes:"i",
+                    ober:"o",
+                    ufat:"u"
+                };
+                entrada = entrada.replace(/ai|enter|imes|ober|ufat/g, function(matched){
+                    return mapObj[matched];
+                });
+                document.getElementById("textarea").value = entrada;
+                document.getElementById("detective").style.visibility = "hidden";
+                document.getElementById("input").value = "";
                     
-                }
+            }
     }
 
     function copy(){
